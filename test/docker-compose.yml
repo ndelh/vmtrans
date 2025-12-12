@@ -1,0 +1,16 @@
+services:
+  nginx:
+    container_name: nginx_trans
+    build: ./nginx
+    image: nginx
+    pull_policy: never
+    restart: on-failure
+    networks:
+      - trans
+    ports:
+      - "443:443"
+
+networks:
+  trans:
+    name: trans_network
+    driver: bridge  
