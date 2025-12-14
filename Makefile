@@ -1,6 +1,6 @@
 up:
 	@echo "docker"
-	@docker compose -f ./test/docker-compose.yml up -d 
+	@docker compose -f ./test/docker-compose.yml up 
 down:
 	@echo "docker down"
 	@docker compose -f ./test/docker-compose.yml down
