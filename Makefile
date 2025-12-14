@@ -1,6 +1,6 @@
 up:
 	@echo "docker"
-	@docker compose -f ./test/docker-compose.yml up -d
+	@docker compose -f ./test/docker-compose.yml up -d 
 down:
 	@echo "docker down"
 	@docker compose -f ./test/docker-compose.yml down
@@ -13,4 +13,4 @@ init:
 	else \
 		echo "init Already done"; \
 	fi
-fclean: down clean up
+re: down clean up
